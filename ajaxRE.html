@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="demo">
+
+<h1>XMLHttpRequest 对象</h1>
+
+<button type="button" onclick="loadDoc('/example/js/ajax_info.txt', myFunction)">更改内容
+</button>
+</div>
+
+<script>
+/*创建一个XMLHttpRequest函数,使用回调函数(即一函数作为参数传递)*/
+function loadDoc(url, cFunction) {
+  var xhttp;
+  xhttp=new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      cFunction(this);
+    }
+  };
+  xhttp.open("GET", url, true);
+  xhttp.send();
+}
+function myFunction(xhttp) {
+  document.getElementById("demo").innerHTML =
+  xhttp.responseText;
+}

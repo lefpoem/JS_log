@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <p id="id01">第一个结点</p>
+    <p id="id02"></p>
+<script>
+    document.getElementById("id02").innerHTML=document.getElementById("id01").firstChild.nodeValue;
+    /*以下两种方式为相同结果:
+    document.getElementById("id02").innerHTML=document.getElementById("id01").innerHTML;
+    document.getElementById("id02").innerHTML=document.getElementById("id01).childNodes[0].nodeValue*/
+</script>
+</body>
+</html>

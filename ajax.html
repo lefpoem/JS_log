@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>XMLHttpRequest 对象</h1>
+    <p id="demo">让AJAX改变这段文本</p>
+    <script>
+
+        function loadDoc(){
+            var xhttp;
+            if (window.XMLHttpRequest){
+                //针对现在的浏览器
+                xhtttp = new XMLHttpRequest();
+            }
+            else{
+                //针对IE5,IE6
+                xhttp = new ActiveXObject("Microsoft.XMLHttp");
+            }
+            xhttp.onreadystatechange = function(){
+                if (this.readyState == 4 && this.status == 200){
+                    document.getElementById("demo").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET","/example/js/ajax_info.txt",true);
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>
