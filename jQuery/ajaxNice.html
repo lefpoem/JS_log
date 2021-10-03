@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="htttp://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $("#test").load("/home/lanrizhi/Dcocumentsh /jquery/demo_test.txt");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <button type="button">显示文本</button>
+        <div id="test">
+        </div>
+    </body>
+</html>

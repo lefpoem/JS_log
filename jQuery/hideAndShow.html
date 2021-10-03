@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#hide").click(function(){
+                    $("p").hide(1000,function(){
+                        alert("alert,nice");
+                    });
+                });
+            });
+            $(document).ready(function(){
+                $("#show").click(function(){
+                    $("p").show();
+                });
+            });
+        </script>       
+    </head>
+    <body>
+        <p>这里的文本可以显示也可以隐藏</p>
+        <button type="button" id="show">显示</button>
+        <button type="button" id="hide">隐藏</button>
+    </body>
+</html>

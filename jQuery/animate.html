@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $("div").animate({left:'250px'});
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <button type="button">开始动画</button>
+        <p>默认情况下,所有HTML位置都是静态的,并且无法移动的,先要对CSS进行操作.</p>
+        <div style="background:#98bf21;height: 100px;width:100px;position:absolute">
+        </div>
+    </body>
+</html>
